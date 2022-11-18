@@ -1,3 +1,18 @@
 .invisible {
     display: none;
 }
+
+#button {
+    background-color: gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+    width: 5%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+input {
+    width: 20%;
+}
