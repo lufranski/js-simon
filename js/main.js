@@ -1,6 +1,3 @@
-
-
-
 // Simon Says
 
 // Il computer genera 5 numeri casuali
