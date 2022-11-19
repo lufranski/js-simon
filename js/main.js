@@ -99,3 +99,8 @@ function addHelloThere (element1){
     element1.classList.add('hellothere');
 }
 
+function arrayComparator (){
+    if(userArray[x] === simonNumbers[x]){
+        pushAndPrint(item);
+    }
+}
