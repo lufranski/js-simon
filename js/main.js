@@ -12,7 +12,9 @@ setTimeout(
     function(){
         simonWrapper.classList.add('invisible');
         // Dopo 30 secondi scompare l'array generato dal pc e appaiono gli input
-        addHelloThere(btn, textField);
+        addHelloThere(btn);
+        addHelloThere(textField);
+
     }    
     , 3000);
     
@@ -33,9 +35,17 @@ setTimeout(
                 
             }
             
-        } //else if (userNumber == NaN) {
-        //     console.log('Hey bucchì, non è un numero questo!');
-        // }
+        } else if (isNaN(userNumber)) {
+            
+            console.log('Hey bucchì, non è un numero questo!');
+            
+            const validationOutput = document.getElementById('output-false');
+
+            addHelloThere(validationOutput);
+
+            validationOutput.innerHTML = 'Hey bucchì, non è un numero questo!';
+
+        }
         
         
     }
@@ -85,8 +95,7 @@ function pushAndPrint (item) {
     addHelloThere(userOutput);
 }
 
-function addHelloThere (element1, element2){
+function addHelloThere (element1){
     element1.classList.add('hellothere');
-    element2.classList.add('hellothere');
 }
 

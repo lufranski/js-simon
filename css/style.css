@@ -44,7 +44,7 @@ input {
     justify-content: center;
 }
 
-#output {
+#output,#output-false{
     width: 30%;
     margin: 50px auto;
     border-radius: 20px;
