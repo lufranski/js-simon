@@ -1,5 +1,21 @@
+body {
+    background-color: #00005C;
+    font-family: 'Lobster', cursive;
+}
+
+h2 {
+    color: #F49D1A;
+    font-size: 100px;
+    text-align: center;
+}
+
 .invisible {
     display: none;
+}
+
+#simon-numbers {
+    text-align: center;
+    color: #F49D1A;
 }
 
 #button {
@@ -9,10 +25,31 @@
     width: 5%;
     text-align: center;
     font-size: 20px;
-    margin-top: 5px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 input {
     width: 20%;
+    border-radius: 20px;
+}
+
+.hellothere {
+    transition: 1s;
+    display: block;
+}
+
+#input {
+    display: flex;
+    justify-content: center;
+}
+
+#output {
+    width: 30%;
+    margin: 50px auto;
+    border-radius: 20px;
+    border: 1px solid #F49D1A;
+    text-align: center;
+    color: #F49D1A;
+    padding: 10px;
 }

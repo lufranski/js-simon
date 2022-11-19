@@ -3,56 +3,51 @@
 // Il computer genera 5 numeri casuali
 let simonNumbers = arrayGenerator(5);
 
-console.log(simonNumbers);
-
 const simonWrapper = document.getElementById('simon-numbers');
 
 simonWrapper.innerHTML = simonNumbers;
-console.log(simonWrapper);
 
 // Parte un timer di 30 secondi 
 setTimeout(
     function(){
         simonWrapper.classList.add('invisible');
+        // Dopo 30 secondi scompare l'array generato dal pc e appaiono gli input
+        addHelloThere(btn, textField);
     }    
-, 30000);
-
-const btn = document.getElementById('button');
-let userArray = [];
-const textField = document.querySelector('input');
-
-btn.addEventListener('click' , 
+    , 3000);
+    
+    const btn = document.getElementById('button');
+    let userArray = [];
+    const textField = document.querySelector('input');
+    
+    btn.addEventListener('click' , 
     function(){
-        
-
-        console.log(textField);
-        
+                
         let userNumber = parseInt(textField.value);
-        
-        console.log(userNumber);
-        
+                
         if (simonNumbers.includes(userNumber)){
-        
+            
             if (!userArray.includes(userNumber)){
                 
                 pushAndPrint(userNumber);
                 
             }
-            console.log(userArray);
             
-        }
+        } //else if (userNumber == NaN) {
+        //     console.log('Hey bucchì, non è un numero questo!');
+        // }
         
-
+        
     }
     );
-
-
-
     
-// Functions
-function numberGenerator(){
-    // Genera un numero random da 1 a 100
-    return Math.floor((Math.random() * 100) + 1);
+    
+    
+    
+    // Functions
+    function numberGenerator(){
+        // Genera un numero random da 1 a 100
+        return Math.floor((Math.random() * 100) + 1);
     
 }
 
@@ -83,10 +78,15 @@ function pushAndPrint (item) {
     let counter = userArray.length;
     
     const userOutput = document.getElementById('output');
+
     
     userOutput.innerHTML = `${userArray} <br> Hai indovinato ${counter} numeri`;
     
+    addHelloThere(userOutput);
 }
 
-
+function addHelloThere (element1, element2){
+    element1.classList.add('hellothere');
+    element2.classList.add('hellothere');
+}
 

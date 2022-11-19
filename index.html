@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Simon Says</title>
 </head>
 <body>
-    
-    <div id="simon-numbers"></div>
-    
-    <input type="text" placeholder="Inserisci i numeri che hai visto ...">
-    <div id="button">Inserisci</div>
 
-    <div id="output"></div>
+    <h2>SimonSays.io</h2>
+
+        <div id="simon-numbers"></div>
+        <div id="input">
+            <input type="text" placeholder="Inserisci i numeri che hai visto ..." class="invisible">
+            <div id="button" class="invisible">Inserisci</div>
+        </div>
     
+        <div id="output" class="invisible"></div>
+        
+
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
