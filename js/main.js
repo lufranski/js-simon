@@ -10,54 +10,48 @@ console.log(simonNumbers);
 
 const simonWrapper = document.getElementById('simon-numbers');
 
+simonWrapper.innerHTML = simonNumbers;
 console.log(simonWrapper);
 
-simonWrapper.innerHTML = simonNumbers;
 // Parte un timer di 30 secondi 
-const timer = setTimeout(
+setTimeout(
     function(){
-        for(let i = 0; i < 5; i++){
-            
-            let userNumber = parseInt(prompt('Inserisci uno dei numeri che hai visto ... '));
+        simonWrapper.classList.add('invisible');
+    }    
+, 30000);
 
-            console.log(userNumber);
-            
-            let userArray = [];
-            
-
-            if (userNumber == simonNumbers[i]){
-                    
-                userArray.push(userNumber);
-                
-                let counter = userArray.length;
-                console.log(counter);
-    
-                console.log(userArray);
-    
-                console.log('Hai indovinato ' + counter + 'numeri');
-            }
-
-
-
-        }
-    }
-, 3000);
-
-// A questo punto i 5 numeri scompaiono e l'utente deve inserire, uno alla volta, i numeri che ha visto
-
-// const clock = setTimeout(() => wrapper.classList.add('invisible'), 30000);
-
+const btn = document.getElementById('button');
 let userArray = [];
+const textField = document.querySelector('input');
+
+btn.addEventListener('click' , 
+    function(){
+        
+
+        console.log(textField);
+        
+        let userNumber = parseInt(textField.value);
+        
+        console.log(userNumber);
+        
+        if (simonNumbers.includes(userNumber)){
+        
+            if (!userArray.includes(userNumber)){
+                
+                pushAndPrint(userNumber);
+                
+            }
+            console.log(userArray);
+            
+        }
+        
+
+    }
+    );
+
 
 
     
-
-
-
-
-
-
-
 // Functions
 function numberGenerator(){
     // Genera un numero random da 1 a 100
@@ -85,6 +79,17 @@ function arrayGenerator(elementsNumber){
     return newArray;
 }
 
+function pushAndPrint (item) {
+    
+    userArray.push(item);
+    
+    let counter = userArray.length;
+    
+    const userOutput = document.getElementById('output');
+    
+    userOutput.innerHTML = `${userArray} <br> Hai indovinato ${counter} numeri`;
+    
+}
 
 
 
